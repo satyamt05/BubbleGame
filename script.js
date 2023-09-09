@@ -1,3 +1,15 @@
+ // Check if the screen width is less than a certain threshold (e.g., 768px for typical mobile devices).
+ function isMobileDevice() {
+  return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+}
+
+// Check if the device is mobile, and if so, display an alert message
+if (isMobileDevice()) {
+  alert("Please open this game on a laptop or larger screen device.");
+} 
+
+else {
+
 var timer = 30;
 var score = 0;
 let hitrn=0
@@ -51,3 +63,4 @@ hitvalue()
 makeBubble();
 hitvalue()
 runTimer()
+}
