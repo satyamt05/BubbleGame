@@ -6,7 +6,7 @@
 // Check if the device is mobile and stop the game immediately
 if (isMobileDevice()) {
     alert("Please open this game on a laptop or larger screen device.");
-    document.querySelector("body").innerHTML="<h1>Please open in laptop</h1>"
+    document.querySelector("body").innerHTML="<h1 id=mobile>Please open in laptop to play.Thank you!!</h1>"
 
     throw new Error("Game cannot run on mobile devices.");
 } else {
@@ -64,4 +64,4 @@ hitvalue()
 makeBubble();
 hitvalue()
 runTimer()
-}
+} 
