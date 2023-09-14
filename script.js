@@ -42,6 +42,7 @@ else {
       document.querySelector("#str").innerText = "Start Game";
       nam=document.querySelector("#nam")
       nam.innerText = `Lets Play`;
+      document.querySelector("#score").textContent = 0;
       flag = 0;
     }
   });
@@ -64,6 +65,8 @@ else {
     }
   }});
   function game() {  
+    document.querySelector("#score").textContent = 0;
+
     nam=document.querySelector("#nam")
     nam.innerText = `Hi ${name}`;
      flag1 = 0;
