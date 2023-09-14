@@ -1,6 +1,8 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap');
 * {
   margin: 0;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
   padding: 0px;
   box-sizing: border-box;
 }
@@ -8,7 +10,7 @@ html,
 body {
   width: 100%;
   height: 100%;
-  
+  font-family: 'Shantell Sans', cursive;
 }
 
 #main {
@@ -96,6 +98,7 @@ background-color: aquamarine;
   justify-content: center;
   flex-direction: row;
   align-items: center;
+  position: relative;
  
   background-color: rgb(84, 152, 121);
  
@@ -105,9 +108,11 @@ background-color: aquamarine;
 }
 
 #str,#pause {
-  width: 7rem;
+  width: 9rem;
   margin: 1rem;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+  font-family: 'Shantell Sans', cursive;
+font-size: medium;
 
   padding: .3rem;
   background-color: #0f0f0f;
@@ -118,21 +123,25 @@ background-color: aquamarine;
 }
 #str:hover,#pause:hover{
   background-color: rgb(245, 140, 140);
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: larger;
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+  font-family: 'Shantell Sans', cursive;
+  width: 9.1rem;
+  margin: 1.1rem;
+  font-weight: 900;
  
 
 }
 
-#nn{
- float: right;
- margin-left: 20px;
+#nam{
+display: flex;
+justify-content: center;
+background-color:  rgb(68, 196, 157);
+/* font-family:C/ambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+font-size: large;
+/* margin-left: 50rem; */
+font-weight: 700;
+color: #0f0f0f;
+margin: 2px;
 }
 
 
-
-.nn1{
-  display: flex;
-  margin-right: 40px;
-  justify-content: center;
-}

@@ -4,6 +4,7 @@ let timerint
 let timer;
 let flag=0
 let flag1
+let nam
 
 let name
 let score
@@ -22,22 +23,27 @@ if (isMobileDevice()) {
 
   throw new Error("Game cannot run on mobile devices.");
 } else {
-
+  
   //stop
   let start = document.querySelector("#str");
 
   start.addEventListener("click", function () {
+    
     if (flag == 0) {
       game();
       document.querySelector("#pause").innerHTML = "Pause Game";
       document.querySelector("#str").innerText = "Stop Game";
       timer = 30;
+     
       flag = 1;
     } 
     else {
       clearInterval(timerint);
       document.querySelector("#pbtm").innerHTML = `<h1>  Game Over, ${name} your final Score was ${score}</h1>`;
       document.querySelector("#str").innerText = "Start Game";
+      nam=document.querySelector("#nam")
+  
+      nam.innerText = `Lets Play`;
       
       // document.querySelector("#str").innerText = "Start Game";
 
@@ -83,6 +89,10 @@ if (isMobileDevice()) {
 
 
   function game() {  
+    nam=document.querySelector("#nam")
+    // nam.innerText="Hi ${name}"
+    nam.innerText = `Hi ${name}`;
+
      flag1 = 0;
      name = prompt("What's your name?","Guest");
      if(name==null) {
@@ -130,6 +140,9 @@ if (isMobileDevice()) {
     document.querySelector("#pbtm").innerHTML = clutter;
   }
   function runTimer() {
+    nam=document.querySelector("#nam")
+  
+  nam.innerText = `Hi ${name}`;
     if(!timer)
       return;
     // console.log("called")
@@ -139,6 +152,9 @@ if (isMobileDevice()) {
        document.querySelector("#timerval").textContent = timer;
      } else {
        clearInterval(timerint);
+       nam=document.querySelector("#nam")
+  
+       nam.innerText = `Lets Play`;
        document.querySelector("#pbtm").innerHTML = `<h1>  Game Over, ${name} your final Score was ${score}</h1>`;
       document.querySelector("#str").innerText = "Start Game";
       flag=0
