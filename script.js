@@ -33,6 +33,7 @@ else {
       game();
       document.querySelector("#pause").innerHTML = "Pause Game";
       document.querySelector("#str").innerText = "Stop Game";
+     
       timer = 30;
       flag = 1;
     } 
@@ -40,6 +41,10 @@ else {
       clearInterval(timerint);
       document.querySelector("#pbtm").innerHTML = `<h1>  Game Over, ${name} your final Score was ${score}</h1>`;
       document.querySelector("#str").innerText = "Start Game";
+      // document.querySelector("#pbtm").addEventListener("click", e => {
+      //   e.preventDefault()
+      // })
+      document.getElementById('pbtm').style.pointerEvents = 'none';
       nam=document.querySelector("#nam")
       nam.innerText = `Lets Play`;
       document.querySelector("#score").textContent = 0;
@@ -47,7 +52,7 @@ else {
     }
   });
 
-  //Pause Game
+  //Pause Games
   let pause = document.querySelector("#pause");
   pause.addEventListener("click", function () {
     if(flag===1 && timer!=0){
@@ -70,10 +75,15 @@ else {
     nam=document.querySelector("#nam")
     nam.innerText = `Hi ${name}`;
      flag1 = 0;
-     name = prompt("What's your name?","Guest");
-     if(name==null) {
-        game()
-     }
+
+     do{
+      name = prompt("What's your name?","Guest");
+  }while(name == null || name == "" );
+
+    //  name = prompt("What's your name?","Guest");
+    //  if(name==null) {
+    //     game()
+    //  }
     timer = 30;
     score = 0;
     let hitrn = 0;
@@ -119,9 +129,13 @@ else {
        nam=document.querySelector("#nam")
        nam.innerText = `Lets Play`;
        document.querySelector("#pbtm").innerHTML = `<h1>  Game Over, ${name} your final Score was ${score}</h1>`;
+       document.getElementById('pbtm').style.pointerEvents = 'none';
       document.querySelector("#str").innerText = "Start Game";
       flag=0
      }
    }, 1000);
  }
+ window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
 }
+} 
