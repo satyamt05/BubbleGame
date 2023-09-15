@@ -33,7 +33,7 @@ else {
       game();
       document.querySelector("#pause").innerHTML = "Pause Game";
       document.querySelector("#str").innerText = "Stop Game";
-     
+     window.scrollBy(0,75)
       timer = 30;
       flag = 1;
     } 
