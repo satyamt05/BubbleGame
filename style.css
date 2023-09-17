@@ -17,7 +17,10 @@ body {
   justify-content: center;
   width: 100%;
   height: 100%;
-  background-color: rgb(106, 131, 91);
+  /* background-color: rgb(106, 131, 91);
+   */
+   background-color: rgb(14 11 41);
+  /* animation: ani 10s forwards 1s infinite ; */
 }
 
 #panel {
@@ -36,7 +39,8 @@ body {
   color: #fff;
   width: 100%;
   height: 100px;
-  background-color: rgb(84, 152, 121);
+  /* background-color: rgb(84, 152, 121); */
+  background-color: rgb(32 88 99);
 }
 .elem {
   display: flex;
@@ -60,6 +64,9 @@ body {
   padding: 20px;
   width: 100%;
   height: calc(100% - 100px);
+  animation: ani1 10s forwards infinite ;
+  
+
 }
 
 .bubble {
@@ -95,8 +102,7 @@ body {
   flex-direction: row;
   align-items: center;
   position: relative;
-
-  background-color: rgb(84, 152, 121);
+  background-color: rgb(133 100 152);
 }
 
 #str,
@@ -112,22 +118,31 @@ body {
   color: white;
   font-size: large;
   border-radius: 10px;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 #str:hover,
 #pause:hover {
-  background-color: rgb(245, 140, 140);
+  border: none;
+  /* background-color: rgb(245, 140, 140); */
   /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
   font-family: "Shantell Sans", cursive;
   width: 9.1rem;
   margin: 1.1rem;
+  box-shadow: 3px 3px 5px yellow;
+  color: #0f0f0f;
   font-weight: 900;
+  animation: startbtn 1s forwards 0s infinite ;
+  cursor: pointer;
 }
 
 #nam {
   display: flex;
   justify-content: center;
-  background-color: rgb(84, 152, 121);
+  /* background-color: rgb(84, 152, 121); */
+  /* background-color: rgb(84, 152, 121); */
+  background-color: rgb(133 100 152);
+
+
   /* font-family:C/ambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
   font-size: large;
   /* margin-left: 50rem; */
@@ -136,3 +151,59 @@ body {
   /* border: 2px solid red; */
   margin: 2px;
 }
+
+/* 
+
+@keyframes ani{
+  from{
+    left: 0%;
+    background-color: rgb(213, 185, 149);
+}
+to{
+  left: 50%;
+  background-color:#f9bdbd ;
+}}
+ */
+
+
+
+
+@keyframes ani1{
+  from{
+    background-color:rgb(249, 189, 250)
+
+    
+    
+
+  }
+ to{
+  background-color :rgb(114, 162, 212) ;
+
+  }
+    
+  }
+
+@keyframes startbtn{
+  0%{
+ 
+
+   background-color: rgb(190, 247, 228);
+    left: 0px;
+    
+    
+
+  }
+  100%{
+  
+
+    background-color:rgb(243, 174, 244);
+    left: 100px;
+  }
+    
+  }
+  /* from{
+    background-color: rgb(187, 230, 69);
+}
+to{
+  background-color:#b44040 ;
+}} */
