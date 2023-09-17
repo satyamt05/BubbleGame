@@ -75,15 +75,16 @@ body {
   justify-content: center;
   width: 60px;
   height: 60px;
-  background-color: rgb(72, 104, 72);
+  background-color: black;
   color: #fff;
   border-radius: 50%;
   font-weight: 500;
 }
 .bubble:hover {
-  background-color: rgb(68, 196, 157);
+  background-color: gray;
+  font-size:x-large;
   cursor: pointer;
-  box-shadow: 12px 12px 12px rgb(103, 187, 114);
+  box-shadow: 5px 5px 5px rgb(62, 63, 62);
 }
 
 #mobile {
