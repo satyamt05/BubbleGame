@@ -23,9 +23,9 @@ if (isMobileDevice()) {
 
   throw new Error("Game cannot run on mobile devices.");
 } 
-
+Date
 //If laptop them rum entire code
-else {
+
   //Stop Game
   let start = document.querySelector("#str");
   start.addEventListener("click", function () {
@@ -34,17 +34,17 @@ else {
       document.querySelector("#pause").innerHTML = "Pause Game";
       document.querySelector("#str").innerText = "Stop Game";
      window.scrollBy(0,75)
-      timer = 30;
+      timer = 3;
       flag = 1;
     } 
     else {
       clearInterval(timerint);
       document.querySelector("#pbtm").innerHTML = `<h1>  Game Over, ${name} your final Score was ${score}</h1>`;
       document.querySelector("#str").innerText = "Start Game";
-      // document.querySelector("#pbtm").addEventListener("click", e => {
-      //   e.preventDefault()
-      // })
-      document.getElementById('pbtm').style.pointerEvents = 'none';
+      
+      // document.getElementById('pbtm').style.pointerEvents = 'none';
+     
+
       nam=document.querySelector("#nam")
       nam.innerText = `Lets Play`;
       document.querySelector("#score").textContent = 0;
@@ -57,12 +57,14 @@ else {
   pause.addEventListener("click", function () {
     if(flag===1 && timer!=0){
     if (flag1 === 0) {
+      console.log("fuck tyou");
       document.querySelector("#pause").innerText = "Resume";
       document.querySelector("#pbtm").innerHTML = `<h1>Game Paused</h1>`;
       flag1 = 1;
       clearInterval(timerint);
     } 
     else {
+      console.log("fuck grdtfysfdghtyou");
         runTimer();
         makeBubble();
         document.querySelector("#pause").innerText = "Pause";
@@ -129,8 +131,14 @@ else {
        nam=document.querySelector("#nam")
        nam.innerText = `Lets Play`;
        document.querySelector("#pbtm").innerHTML = `<h1>  Game Over, ${name} your final Score was ${score}</h1>`;
-       document.getElementById('pbtm').style.pointerEvents = 'none';
       document.querySelector("#str").innerText = "Start Game";
+      if(start.innerText==="Start Game"){
+        document.querySelector("#pbtm").addEventListener("click", e => {
+          document.querySelector("#pbtm").innerHTML = `<h1>  Game Over, ${name} your final Score was ${score}</h1>`;
+          document.querySelector("#hit").textContent = 0;
+
+        })
+      }
       flag=0
      }
    }, 1000);
@@ -138,4 +146,4 @@ else {
  window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 }
-} 
+
