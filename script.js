@@ -8,22 +8,22 @@ let name
 let score
 
 // Function to detect if the device is a mobile device
-function isMobileDevice() {
-  return (
-    typeof window.orientation !== "undefined" ||
-    navigator.userAgent.indexOf("IEMobile") !== -1
-  );
-}
+// function isMobileDevice() {
+//   return (
+//     typeof window.orientation !== "undefined" ||
+//     navigator.userAgent.indexOf("IEMobile") !== -1
+//   );
+// }
 
-// Check if the device is mobile and stop the game immediately
-if (isMobileDevice()) {
-  alert("Please open this game on a laptop or larger screen device.");
-  document.querySelector("body").innerHTML =
-    "<h1 id=mobile>Please open in laptop to play.Thank you!!</h1>";
+// // Check if the device is mobile and stop the game immediately
+// if (isMobileDevice()) {
+//   alert("Please open this game on a laptop or larger screen device.");
+//   document.querySelector("body").innerHTML =
+//     "<h1 id=mobile>Please open in laptop to play.Thank you!!</h1>";
 
-  throw new Error("Game cannot run on mobile devices.");
-} 
-Date
+//   throw new Error("Game cannot run on mobile devices.");
+// } 
+
 //If laptop them rum entire code
 
   //Stop Game
@@ -99,7 +99,13 @@ Date
     }
     document.querySelector("#pbtm").addEventListener("click", function (detail) {
         let clickednumber = Number(detail.target.textContent);
-        if (hitrn === clickednumber) increasescore();
+        if (hitrn === clickednumber) 
+        {
+          increasescore();
+          // clickednumber.rotate(360)
+        }
+        // clickednumber.innerHTML.style.backgroundColor="red"
+
         if(!flag1){
         makeBubble();
         hitvalue();}
