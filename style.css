@@ -83,6 +83,9 @@ body {
   color: #fff;
   border-radius: 50%;
   font-weight: 500;
+  animation: rotate 1.5s ;
+  animation-timing-function: all-ease;
+
 }
 .bubble:hover {
   background-color: gray;
@@ -90,6 +93,7 @@ body {
   cursor: pointer;
   box-shadow: 5px 5px 5px rgb(62, 63, 62);
 }
+
 
 #mobile {
   display: flex;
@@ -262,6 +266,8 @@ to{
   color: #fff;
   border-radius: 50%;
   font-weight: 500;
+  animation: rotate 1.5s ;
+  animation-timing-function: all-ease;
 }
 .bubble:hover {
   background-color: gray;
@@ -332,6 +338,8 @@ to{
   color: #fff;
   border-radius: 50%;
   font-weight: 500;
+  animation: rotate 1.5s ;
+  animation-timing-function: all-ease;
 }
 .bubble:hover {
   background-color: gray;
@@ -357,4 +365,16 @@ to{
 
 }
 
+ }
+
+
+ @keyframes rotate {
+  0%{
+    transform:rotateY(0deg) ;
+
+  }
+  100%{
+    transform: rotateY(360deg);
+  }
+  
  }

@@ -34,7 +34,7 @@ let score
       document.querySelector("#pause").innerHTML = "Pause Game";
       document.querySelector("#str").innerText = "Stop Game";
      window.scrollBy(0,75)
-      timer = 30;
+      timer = 301311;
       flag = 1;
     } 
     else {
@@ -57,14 +57,14 @@ let score
   pause.addEventListener("click", function () {
     if(flag===1 && timer!=0){
     if (flag1 === 0) {
-      console.log("fuck tyou");
+      
       document.querySelector("#pause").innerText = "Resume";
       document.querySelector("#pbtm").innerHTML = `<h1>Game Paused</h1>`;
       flag1 = 1;
       clearInterval(timerint);
     } 
     else {
-      console.log("fuck grdtfysfdghtyou");
+ 
         runTimer();
         makeBubble();
         document.querySelector("#pause").innerText = "Pause";
@@ -99,8 +99,17 @@ let score
     }
     document.querySelector("#pbtm").addEventListener("click", function (detail) {
         let clickednumber = Number(detail.target.textContent);
+        let circle = detail.target;
+        console.log(circle)
         if (hitrn === clickednumber) 
         {
+          // circle.style.animationName='rotate'
+          // circle.style.animationDuration='1s'
+          // circle.classList.add('rotate');
+        circle.style.backgroundColor="red"
+
+          circle.classList.add('rotate');
+
           increasescore();
           // clickednumber.rotate(360)
         }
@@ -119,7 +128,7 @@ let score
     let clutter = "";
     for (let i = 1; i <= 112; i++) {
       var rn = Math.floor(Math.random() * 10);
-      clutter += `<div class="bubble">${rn}</div>`;
+      clutter += `<div class="bubble ">${rn}</div>`;
     }
     document.querySelector("#pbtm").innerHTML = clutter;
   }
