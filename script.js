@@ -1,4 +1,3 @@
-
 let timerint
 let timer;
 let flag=0
@@ -6,6 +5,25 @@ let flag1
 let nam
 let name
 let score
+let nr
+let nc
+if(window.innerWidth <= 423) {
+  nr = Math.floor((document.querySelector('#pbtm').clientWidth - 40 + 10)/(48 + 10));
+  nc = Math.floor((document.querySelector('#pbtm').clientHeight -64 - 40 + 10)/(48 + 10)); 
+}
+
+else if(window.innerWidth >= 1300){
+  nr = Math.floor((document.querySelector('#pbtm').clientWidth - 40 + 10)/(64 + 10));
+  nc = Math.floor((document.querySelector('#pbtm').clientHeight -40 + 10)/(64 + 10));
+}
+else  {
+  nr = Math.floor((document.querySelector('#pbtm').clientWidth - 40 + 10)/(57 + 10));
+  nc = Math.floor((document.querySelector('#pbtm').clientHeight -40 + 10)/(57 + 10));
+}
+let tb = nr*nc;
+// console.log((0.85*window.innerWidth));
+// console.log((0.9*window.innerHeight -30-64));
+// console.log(nr,nc,tb);
 
 // Function to detect if the device is a mobile device
 // function isMobileDevice() {
@@ -22,7 +40,7 @@ let score
 //     "<h1 id=mobile>Please open in laptop to play.Thank you!!</h1>";
 
 //   throw new Error("Game cannot run on mobile devices.");
-// } 
+// }
 
 //If laptop them rum entire code
 
@@ -33,15 +51,15 @@ let score
       game();
       document.querySelector("#pause").innerHTML = "Pause Game";
       document.querySelector("#str").innerText = "Stop Game";
-     window.scrollBy(0,75)
-      timer = 30;
+      window.scrollBy(0,75)
+      timer = 3000;
       flag = 1;
-    } 
+    }
     else {
       clearInterval(timerint);
       document.querySelector("#pbtm").innerHTML = `<h1>  Game Over, ${name} your final Score was ${score}</h1>`;
       document.querySelector("#str").innerText = "Start Game";
-      
+     
       // document.getElementById('pbtm').style.pointerEvents = 'none';
      
 
@@ -57,12 +75,12 @@ let score
   pause.addEventListener("click", function () {
     if(flag===1 && timer!=0){
     if (flag1 === 0) {
-      
+     
       document.querySelector("#pause").innerText = "Resume";
       document.querySelector("#pbtm").innerHTML = `<h1>Game Paused</h1>`;
       flag1 = 1;
       clearInterval(timerint);
-    } 
+    }
     else {
  
         runTimer();
@@ -86,7 +104,7 @@ let score
     //  if(name==null) {
     //     game()
     //  }
-    timer = 30;
+    timer = 3000;
     score = 0;
     let hitrn = 0;
     function increasescore() {
@@ -100,24 +118,27 @@ let score
     document.querySelector("#pbtm").addEventListener("click", function (detail) {
         let clickednumber = Number(detail.target.textContent);
         let circle = detail.target;
-        console.log(circle)
-        if (hitrn === clickednumber) 
+        if (hitrn === clickednumber && circle.className=="bubble")
         {
-          // circle.style.animationName='rotate'
-          // circle.style.animationDuration='1s'
-          // circle.classList.add('rotate');
-        circle.style.backgroundColor="red"
-
-          circle.classList.add('rotate');
+          circle.style.animationName='rotate'
+          circle.style.animationDuration='1s'
+          circle.style.backgroundColor="green"
 
           increasescore();
-          // clickednumber.rotate(360)
+          if(!flag1){
+            setTimeout(() => {
+              makeBubble();
+              hitvalue();
+            }, 1);
+          }
+        }
+        else if(circle.className=="bubble"){
+          circle.style.animationName='rotate'
+          circle.style.animationDuration='1s'
+          circle.style.backgroundColor="red"
         }
         // clickednumber.innerHTML.style.backgroundColor="red"
 
-        if(!flag1){
-        makeBubble();
-        hitvalue();}
       }
       );
     makeBubble();
@@ -126,12 +147,13 @@ let score
   }
   function makeBubble() {
     let clutter = "";
-    for (let i = 1; i <= 112; i++) {
+    for (let i = 1; i <= tb; i++) {
       var rn = Math.floor(Math.random() * 10);
-      clutter += `<div class="bubble ">${rn}</div>`;
+      clutter += `<div class="bubble">${rn}</div>`;
     }
     document.querySelector("#pbtm").innerHTML = clutter;
   }
+  
   function runTimer() {
   nam=document.querySelector("#nam")
   nam.innerText = `Hi ${name}`;
@@ -161,4 +183,3 @@ let score
  window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 }
-

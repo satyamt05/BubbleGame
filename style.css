@@ -73,7 +73,7 @@ body {
 
 }
 
-.bubble {
+.bubble{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,11 +83,11 @@ body {
   color: #fff;
   border-radius: 50%;
   font-weight: 500;
-  animation: rotate 1.5s ;
+  animation: rotate 1s ;
   animation-timing-function: all-ease;
 
 }
-.bubble:hover {
+.bubble:hover{
   background-color: gray;
   font-size:x-large;
   cursor: pointer;
@@ -224,7 +224,7 @@ to{
  @media (max-width: 1420px) and (min-width: 400px)
  {
   #ptop {
-       /* padding: 0px 30%; */
+       padding: 0px 30%;
        justify-content: space-between;
        display: flex;
        margin-left: -80px;
@@ -241,6 +241,7 @@ to{
     display: flex;
     align-items: center;
     margin: 2px -30px;
+    gap: 8px;
  }
  .box {
   font-weight: 300;
@@ -256,7 +257,7 @@ to{
 }
 
 
-.bubble {
+.bubble{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -266,10 +267,10 @@ to{
   color: #fff;
   border-radius: 50%;
   font-weight: 500;
-  animation: rotate 1.5s ;
+  animation: rotate 1s ;
   animation-timing-function: all-ease;
 }
-.bubble:hover {
+.bubble:hover{
   background-color: gray;
   font-size:x-large;
   cursor: pointer;
@@ -283,7 +284,7 @@ to{
   gap: 10px;
   padding: 20px;
   width: 100%;
-  height: 87%;
+  height: 88.5%;
   overflow: hidden;
   background-size: 200%;
   background-image: linear-gradient(to right,rgb(249, 189, 189),rgb(58, 16, 163));
@@ -328,7 +329,7 @@ to{
 
 
 
-.bubble {
+.bubble{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -338,10 +339,10 @@ to{
   color: #fff;
   border-radius: 50%;
   font-weight: 500;
-  animation: rotate 1.5s ;
+  animation: rotate 1s ;
   animation-timing-function: all-ease;
 }
-.bubble:hover {
+.bubble:hover{
   background-color: gray;
   font-size:x-large;
   cursor: pointer;
@@ -356,7 +357,7 @@ to{
   gap: 10px;
   padding: 20px;
   width: 100%;
-  height: 87%;
+  height: 100%;
   overflow: hidden;
   background-size: 200%;
   background-image: linear-gradient(to right,rgb(249, 189, 189),rgb(58, 16, 163));
@@ -397,7 +398,7 @@ to{
 
 
 
-.bubble {
+.bubble{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -407,10 +408,10 @@ to{
   color: #fff;
   border-radius: 50%;
   font-weight: 500;
-  animation: rotate 1.5s ;
+  animation: rotate 1s ;
   animation-timing-function: all-ease;
 }
-.bubble:hover {
+.bubble:hover{
   background-color: gray;
   font-size:x-large;
   cursor: pointer;
@@ -425,7 +426,7 @@ to{
   gap: 10px;
   padding: 20px;
   width: 100%;
-  height: 87%;
+  height:88.5%;
   overflow: hidden;
   background-size: 200%;
   background-image: linear-gradient(to right,rgb(249, 189, 189),rgb(58, 16, 163));
