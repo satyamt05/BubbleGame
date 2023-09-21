@@ -52,7 +52,7 @@ let tb = nr*nc;
       document.querySelector("#pause").innerHTML = "Pause Game";
       document.querySelector("#str").innerText = "Stop Game";
       window.scrollBy(0,75)
-      timer = 3000;
+      timer = 31;
       flag = 1;
     }
     else {
@@ -104,7 +104,7 @@ let tb = nr*nc;
     //  if(name==null) {
     //     game()
     //  }
-    timer = 3000;
+    timer = 31;
     score = 0;
     let hitrn = 0;
     function increasescore() {
@@ -129,7 +129,7 @@ let tb = nr*nc;
             setTimeout(() => {
               makeBubble();
               hitvalue();
-            }, 1);
+            }, 300);
           }
         }
         else if(circle.className=="bubble"){
